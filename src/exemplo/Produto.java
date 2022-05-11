@@ -30,4 +30,12 @@ public class Produto {
 	public String toString() {
 		return "Produto ID: " + getId() + " - Fabricante: " + getFabricante();
 	}
+
+	public void setNome(String novoNome) {
+		this.nome = novoNome;
+	}
+
+	public void setFabricante(String novoFabricante) {
+		this.nome = novoFabricante;
+	}
 }
