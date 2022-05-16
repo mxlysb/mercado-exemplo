@@ -1,6 +1,9 @@
 package exemplo;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ProdutoRepository {
@@ -27,5 +30,16 @@ public class ProdutoRepository {
 
     public Produto getProduto(String idProduto) {
         return catalogo.get(idProduto);
+    }
+
+    public List<Produto> getProdutosNome(String nome) {
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        for (Produto p: catalogo.values()) {
+            if(p.getNome().contains(nome)) {
+                produtos.add(p);
+            }
+        }
+        return produtos;
     }
 }
